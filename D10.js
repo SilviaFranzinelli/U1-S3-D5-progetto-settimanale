@@ -378,16 +378,34 @@ console.log(searchByTitle(movies, "Lord"));
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
+function removeIndex(movies, index) {
+  return movies.slice(0, index).concat(movies.slice(index + 1));
+}
 
+console.log(removeIndex(movies, 2));
+
+console.log(
+  "************************************************************************"
+);
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
+function selectContainer() {
+  const container = document.getElementById("container");
+  return container;
+}
+console.log(selectContainer());
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
+function selectAllTd() {
+  const tdElements = document.getElementsByTagName("td");
+  return tdElements;
+}
+console.log(selectAllTd());
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
